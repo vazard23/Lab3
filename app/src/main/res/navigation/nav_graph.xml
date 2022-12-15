@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.lab3.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_psycho"
+            app:destination="@id/psycho" />
+        <action
+            android:id="@+id/action_FirstFragment_to_fight"
+            app:destination="@id/fight" />
+        <action
+            android:id="@+id/action_FirstFragment_to_drive"
+            app:destination="@id/drive" />
+    </fragment>
+    <fragment
+        android:id="@+id/psycho"
+        android:name="com.example.lab3.Psycho"
+        android:label="fragment_psycho"
+        tools:layout="@layout/fragment_psycho" >
+        <action
+            android:id="@+id/action_psycho_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drive"
+        android:name="com.example.lab3.Drive"
+        android:label="fragment_drive"
+        tools:layout="@layout/fragment_drive" >
+        <action
+            android:id="@+id/action_drive_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fight"
+        android:name="com.example.lab3.Fight"
+        android:label="fragment_fight"
+        tools:layout="@layout/fragment_fight" >
+        <action
+            android:id="@+id/action_fight_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>
