@@ -20,7 +20,6 @@ class Drive : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDriveBinding.inflate(layoutInflater, container, false)
-
         return binding.root
     }
 
